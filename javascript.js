@@ -42,9 +42,17 @@ function displayRoundResult(winner,computerChoice,humanChoice){
     console.log(`Your Score: ${humanScore}  , computer score: ${computerScore}`);
 }
 
+function playgame(){
+    while(humanScore < 5 && computerScore < 5){
+        playRound(getHumanChoice(),getComputerChoice());
+    }
+    humanScore == 5 ? console.log("YOU WIN!!!!") : console.log("You lose :(");
+}
+
 let humanScore = 0;
 let computerScore = 0;
 
-playRound(getHumanChoice(),getComputerChoice());
+playgame();
+
 
 
