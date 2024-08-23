@@ -43,10 +43,14 @@ function displayRoundResult(winner,computerChoice,humanChoice){
 }
 
 function playgame(){
-    while(humanScore < 5 && computerScore < 5){
+    let i = 0;
+    while(i < 5){
+        let prevCompScore = computerScore;
+        let prevHumanScore = humanScore; 
         playRound(getHumanChoice(),getComputerChoice());
+        if(prevCompScore != computerScore || prevHumanScore != humanScore)i++;
     }
-    humanScore == 5 ? console.log("YOU WIN!!!!") : console.log("You lose :(");
+    humanScore > computerScore ? console.log("YOU WIN!!!!") : console.log("You lose :(");
 }
 
 let humanScore = 0;
