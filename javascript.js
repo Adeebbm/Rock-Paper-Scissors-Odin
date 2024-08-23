@@ -18,5 +18,21 @@ function getHumanValue(){
     return guess;
 }
 
-console.log(getHumanValue());
+function(){
+
+}
+function playRound(humanGuess,computerGuess){
+    if(humanGuess == "Rock"){
+        computerGuess == "Paper" ? computerScore++ : humanScore++;
+    }else if(humanGuess == "Paper"){
+        computerGuess == "Scissors" ? computerScore++ : humanScore++;
+    }else{
+        computerGuess == "Rock" ? computerScore++ : humanScore++;
+    }
+}
+
+let humanScore = 0;
+let computerScore = 0;
+
+
 
